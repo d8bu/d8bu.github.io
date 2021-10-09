@@ -53,6 +53,7 @@ Array.prototype.randomItem = function() {
   ];
 
 const myRandomUserId = myUserId.randomItem();
+const timeout = Math.floor(Math.random() * (860000 - 242000)) + 242000;
 
 aurovine.getStatus(1847, 11036, myRandomUserId)
     .then(res => console.log(res));
@@ -66,4 +67,4 @@ setTimeout(function(){
     console.log(`last time: ${Math.floor(end / 1000)} seconds`);
 
     // timeout max - min
-    }, Math.floor(Math.random() * (860000 - 242000)) + 242000);
+    }, timeout);
